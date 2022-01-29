@@ -1,5 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+@import 'prism-themes/themes/prism-vsc-dark-plus.css';
+
+body {
+  font-family: 'Manrope';
+}
+.slidev-layout.default,
+.slidev-layout.statement {
+  position: relative;
+  background: lavender;
+}
+.slidev-layout.default::before,
+[layout="statement"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/img/background.svg');
+  background-size: cover;
+  z-index: 0;
+  opacity: .5;
+}
+.slidev-layout.default *,
+[layout="statement"] * {
+  position: relative;
+}
 .slidev-layout h1 + p {
   margin-top: unset;
   margin-bottom: 1rem;
   opacity: unset;
+}
+
+
+.slidev-code.language-js {
+  color: aqua !important;
+}
+.slidev-code.language-css {
+  color: white !important;
 }
